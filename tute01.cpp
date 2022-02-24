@@ -19,15 +19,20 @@ printf("Hello World") --> std::cout << "Hello World";
 
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
 int main() 
 {
-    float cm, inches;
-    std::cout << "Enter a length in cm : ";
-    std::cin >> cm;
+    float cm;
+    float inches;
+    cout << "Enter a length in cm : ";
+    cin >> cm;
 
     inches = cm / 2.54;
 
-    std::cout << "Length in inches is " << inches << std::endl;
-    
+    cout << "Length in inches is " << setiosflags(ios::fixed) << setprecision(2)     
+         << inches << endl;
+  
     return 0;
 }  
